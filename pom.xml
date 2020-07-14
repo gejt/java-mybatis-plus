@@ -12,5 +12,40 @@
         <module>mybatis-generator</module>
     </modules>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <env>dev</env>
+                <maven.url>http://dev-maven.xiaoxin.tech</maven.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+                <maven.url>http://maven.xiaoxin.tech</maven.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>prd</id>
+            <properties>
+                <maven.url>http://maven.xiaoxin.tech</maven.url>
+                <env>prd</env>
+            </properties>
+        </profile>
+    </profiles>
+    <repositories>
+        <repository>
+            <id>cn.beiguting</id>
+            <name>cn.beiguting</name>
+            <url>${maven.url}/repository/maven-public/</url>
+            <releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
+            <snapshots><enabled>true</enabled><updatePolicy>always</updatePolicy></snapshots>
+        </repository>
+    </repositories>
 
 </project>

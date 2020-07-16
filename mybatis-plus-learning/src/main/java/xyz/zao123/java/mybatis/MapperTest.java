@@ -25,14 +25,7 @@ public class MapperTest extends TestApplication {
      */
     @Test
     public void insert() {
-        User user = new User();
-        user.setUserName("gejt");
-        user.setAge(100);
-        user.setEmail("852442493@qq.com");
-        user.setMobile("11111111111");
-        user.setStatus(1);
-        user.setCreateTime(new Date());
-        user.setUpdateTime(new Date());
+        User user = buildUser();
         int insert = userMapper.insert(user);
         Assert.assertEquals(1, insert);
     }
@@ -82,14 +75,7 @@ public class MapperTest extends TestApplication {
      */
     @Test
     public void updateById() {
-        User user = new User();
-        user.setUserName("gejt1111");
-        user.setAge(100);
-        user.setEmail("852442493@qq.com1");
-        user.setMobile("11111111111");
-        user.setStatus(1);
-        user.setCreateTime(new Date());
-        user.setUpdateTime(new Date());
+        User user = buildUser();
         user.setId(5L);
         int update = userMapper.updateById(user);
         Assert.assertEquals(1, update);
@@ -101,14 +87,7 @@ public class MapperTest extends TestApplication {
      */
     @Test
     public void update() {
-        User user = new User();
-        user.setUserName("gejt");
-        user.setAge(99);
-        user.setEmail("852442493@qq.com");
-        user.setMobile("11111111111");
-        user.setStatus(1);
-        user.setCreateTime(new Date());
-        user.setUpdateTime(new Date());
+        User user = buildUser();
         user.setId(5L);
 
         QueryWrapper<User> wrapper = new QueryWrapper<>();

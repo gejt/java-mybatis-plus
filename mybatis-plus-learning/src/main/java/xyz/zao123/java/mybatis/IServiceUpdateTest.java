@@ -73,4 +73,15 @@ public class IServiceUpdateTest extends TestApplication {
                 .in("id", Arrays.asList(20, 21))
                 .update();
     }
+
+    /**
+     * LambdaUpdateChainWrapper 链式操作更新
+     */
+    @Test
+    public void updateLambdaChainWrapper() {
+        userService.lambdaUpdate()
+                .set(User::getUserName,"gejt123")
+                .eq(User::getId,21L)
+                .update();
+    }
 }

@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.junit.Assert;
 import org.junit.Test;
 import xyz.zao123.java.mybatis.dao.entity.User;
+import xyz.zao123.java.mybatis.dto.UserDto;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -201,6 +202,12 @@ public class MapperTest extends TestApplication {
         System.out.println(JSON.toJSONString(mapIPage));
         Assert.assertEquals(1,mapIPage.getRecords().size());
     }
-
-
+    /**
+     * 自定义查询
+     */
+    @Test
+    public void selectUserDtos(){
+        List<UserDto> list = userMapper.selectUserDtos("gejt", 100);
+        Assert.assertTrue(list.size()>0);
+    }
 }

@@ -1232,7 +1232,7 @@ public class IServiceLogicDeleteTest extends TestApplication{
 
 如果version不对，就更新失败
 
----
+
 乐观锁配置需要2步 记得两步
 
 ### 1.插件配置

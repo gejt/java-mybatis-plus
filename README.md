@@ -23,7 +23,7 @@ MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的�
 * 内置性能分析插件：可输出 Sql 语句以及其执行时间，建议开发测试时启用该功能，能快速揪出慢查询
 * 内置全局拦截插件：提供全表 delete 、 update 操作智能分析阻断，也可自定义拦截规则，预防误操作
 
-## #MyBatis-Plus支持数据库
+### MyBatis-Plus支持数据库
 
 mysql 、 mariadb 、 oracle 、 db2 、 h2 、 hsql 、 sqlite 、 postgresql 、 sqlserver 、 presto
 达梦数据库 、 虚谷数据库 、 人大金仓数据库
@@ -1117,7 +1117,7 @@ public class IServiceSelectTest extends TestApplication {
 例如:
 删除: update user set deleted=1 where id = 1 and deleted=0
 
-*查找: select id,name,deleted from user where deleted=0
+查找: select id,name,deleted from user where deleted=0
 
 字段类型支持说明:
 
@@ -1145,7 +1145,7 @@ mybatis-plus.global-config.db-config.logic-not-delete-value=0
 ```
 
 
-###User.java
+### User.java
 ```
 package xyz.zao123.java.mybatis.dao.entity;
 

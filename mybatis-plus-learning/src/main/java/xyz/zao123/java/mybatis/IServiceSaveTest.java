@@ -3,7 +3,9 @@ package xyz.zao123.java.mybatis;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import xyz.zao123.java.mybatis.dao.entity.User;
+import xyz.zao123.java.mybatis.service.UserService;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,6 +15,9 @@ import java.util.Date;
  * @author gejt
  */
 public class IServiceSaveTest extends TestApplication{
+
+    @Autowired
+    protected UserService userService;
 
     /**
      * 保存一条数据

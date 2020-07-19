@@ -2,11 +2,16 @@ package xyz.zao123.java.mybatis;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import xyz.zao123.java.mybatis.service.UserService;
 
 /**
  * @author gejt
  */
 public class IServiceLogicDeleteTest extends TestApplication{
+
+    @Autowired
+    protected UserService userService;
 
     /**
      * 逻辑删除

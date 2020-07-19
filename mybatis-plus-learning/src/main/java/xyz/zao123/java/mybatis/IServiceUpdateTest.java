@@ -4,7 +4,9 @@ package xyz.zao123.java.mybatis;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import xyz.zao123.java.mybatis.dao.entity.User;
+import xyz.zao123.java.mybatis.service.UserService;
 
 import java.util.Arrays;
 
@@ -12,6 +14,9 @@ import java.util.Arrays;
  * @author gejt
  */
 public class IServiceUpdateTest extends TestApplication {
+
+    @Autowired
+    protected UserService userService;
 
     /**
      * 按照id更新
@@ -80,8 +85,8 @@ public class IServiceUpdateTest extends TestApplication {
     @Test
     public void updateLambdaChainWrapper() {
         userService.lambdaUpdate()
-                .set(User::getUserName,"gejt123")
-                .eq(User::getId,21L)
+                .set(User::getUserName, "gejt123")
+                .eq(User::getId, 21L)
                 .update();
     }
 }

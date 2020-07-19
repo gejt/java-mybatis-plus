@@ -10,13 +10,12 @@ import xyz.zao123.java.mybatis.service.UserService;
 
 import java.util.Date;
 
+/**
+ * @author gejt
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
 public class TestApplication {
-    @Autowired
-    protected UserMapper userMapper;
-    @Autowired
-    protected UserService userService;
 
     public static User buildUser(){
         User user = new User();

@@ -3,6 +3,7 @@ package xyz.zao123.java.mybatis.config;
 import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @author gejt
  */
 @Configuration
+@MapperScan("xyz.zao123.java.mybatis.dao.mapper")
 public class MybatisPlusConfig {
 
     /**

@@ -1,12 +1,17 @@
 package xyz.zao123.java.mybatis;
 
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import xyz.zao123.java.mybatis.dao.entity.User;
+import xyz.zao123.java.mybatis.service.UserService;
 
 /**
  * @author gejt
  */
 public class IServiceUpdateLockTest extends TestApplication{
+    @Autowired
+    protected UserService userService;
+
     /**
      * 更新使用乐观锁
      */

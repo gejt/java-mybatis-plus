@@ -4,7 +4,9 @@ package xyz.zao123.java.mybatis;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import xyz.zao123.java.mybatis.dao.entity.User;
+import xyz.zao123.java.mybatis.service.UserService;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -14,6 +16,9 @@ import java.util.Map;
  * @author gejt
  */
 public class IServiceDeleteTest extends TestApplication {
+
+    @Autowired
+    protected UserService userService;
 
     /**
      * 按照id删除

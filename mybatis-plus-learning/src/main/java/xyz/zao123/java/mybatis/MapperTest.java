@@ -6,11 +6,12 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import xyz.zao123.java.mybatis.dao.entity.User;
+import xyz.zao123.java.mybatis.dao.mapper.UserMapper;
 import xyz.zao123.java.mybatis.dto.UserDto;
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,8 @@ import java.util.Map;
  */
 public class MapperTest extends TestApplication {
 
-
+    @Autowired
+    private UserMapper userMapper;
     /**
      * 新增一条数据
      */

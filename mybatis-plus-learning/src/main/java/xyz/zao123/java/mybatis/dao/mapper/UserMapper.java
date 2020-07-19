@@ -13,7 +13,12 @@ import java.util.List;
  */
 public interface UserMapper extends BaseMapper<User> {
 
-
+    /**
+     * 自定义查询
+     * @param userName
+     * @param age
+     * @return
+     */
     @Select("select a.*,'aaaaa' as test from tb_user a where a.user_name=#{userName} and a.age=#{age}")
     List<UserDto> selectUserDtos(@Param("userName") String userName, @Param("age")Integer age);
 

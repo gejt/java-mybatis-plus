@@ -579,7 +579,7 @@ public class MapperTest extends TestApplication {
 ```
 
 
-# 继承Mybatis plus IService 实现通用CRUD接口
+## 继承Mybatis plus IService 实现通用CRUD接口
 
 说明:
 

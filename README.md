@@ -1,6 +1,6 @@
 # 使用Mybatis Plus简化Spring Boot +Mybatis项目开发
 
-##Mybatis Plus 简介
+## Mybatis Plus 简介
 
 MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。
 
@@ -8,7 +8,7 @@ MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的�
 
 ![](./mybatis-plus.png)
 
-###MyBatis-Plus有如下特性：
+### MyBatis-Plus有如下特性：
 
 * 无侵入：只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑
 * 损耗小：启动即会自动注入基本 CURD，性能基本无损耗，直接面向对象操作
@@ -23,18 +23,18 @@ MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的�
 * 内置性能分析插件：可输出 Sql 语句以及其执行时间，建议开发测试时启用该功能，能快速揪出慢查询
 * 内置全局拦截插件：提供全表 delete 、 update 操作智能分析阻断，也可自定义拦截规则，预防误操作
 
-###MyBatis-Plus支持数据库
+## #MyBatis-Plus支持数据库
 
 mysql 、 mariadb 、 oracle 、 db2 、 h2 、 hsql 、 sqlite 、 postgresql 、 sqlserver 、 presto
 达梦数据库 、 虚谷数据库 、 人大金仓数据库
 
-###MyBatis-Plus框架结构
+### MyBatis-Plus框架结构
 
 
 
-##Mybatis Plus 集成Spring Boot项目配置
+## Mybatis Plus 集成Spring Boot项目配置
 
-###项目管理和依赖
+### 项目管理和依赖
 
 示例项目使用Maven管理项目依赖，集成Spring Boot 2.1.14.RELEASE 编写示例代码，项目依赖如下：
 ```
@@ -89,7 +89,7 @@ mysql 、 mariadb 、 oracle 、 db2 、 h2 、 hsql 、 sqlite 、 postgresql �
     </dependencies>
 ```
 
-###项目配置
+### 项目配置
 
 appliation.properties
 ```
@@ -155,7 +155,7 @@ public class MybatisPlusConfig {
 }
 ```
 
-###项目中用到的类
+### 项目中用到的类
 User.java
 ```
 package xyz.zao123.java.mybatis.dao.entity;
@@ -317,7 +317,7 @@ public class TestApplication {
 
 }
 ```
-##Mybatis Plus Mapper CRUD 接口
+## Mybatis Plus Mapper CRUD 接口
 
 说明:
 
@@ -331,7 +331,7 @@ public class TestApplication {
 
 * 分页查询需要配置PaginationInterceptor插件
 
-###UserMapper.java
+### UserMapper.java
 ```
 package xyz.zao123.java.mybatis.dao.mapper;
 
@@ -360,7 +360,7 @@ public interface UserMapper extends BaseMapper<User> {
 }
 ```
 
-###代码示例：MapperTest.java
+### 代码示例：MapperTest.java
 ```
 package xyz.zao123.java.mybatis;
 
@@ -579,7 +579,7 @@ public class MapperTest extends TestApplication {
 ```
 
 
-#继承Mybatis plus IService 实现通用CRUD接口
+# 继承Mybatis plus IService 实现通用CRUD接口
 
 说明:
 
@@ -593,7 +593,7 @@ public class MapperTest extends TestApplication {
 
 * 分页查询需要配置PaginationInterceptor插件
 
-###保存方法代码示例：IServiceSaveTest.java
+### 保存方法代码示例：IServiceSaveTest.java
 ```
 package xyz.zao123.java.mybatis;
 
@@ -686,7 +686,7 @@ public class IServiceSaveTest extends TestApplication{
 ```
 
 
-###删除方法代码示例：IServiceDeleteTest.java
+### 删除方法代码示例：IServiceDeleteTest.java
 ```
 package xyz.zao123.java.mybatis;
 
@@ -749,7 +749,7 @@ public class IServiceDeleteTest extends TestApplication {
 }
 ```
 
-###更新方法代码示例：IServiceUpdateTest.java
+### 更新方法代码示例：IServiceUpdateTest.java
 ```
 package xyz.zao123.java.mybatis;
 
@@ -844,7 +844,7 @@ public class IServiceUpdateTest extends TestApplication {
 ```
 
 
-###查询方法代码示例：IServiceSelectTest.java
+### 查询方法代码示例：IServiceSelectTest.java
 ```
 package xyz.zao123.java.mybatis;
 
@@ -1100,7 +1100,7 @@ public class IServiceSelectTest extends TestApplication {
 ```
 
 
-##Mybatis plus 简化逻辑删除
+## Mybatis plus 简化逻辑删除
 
 说明:
 
@@ -1134,7 +1134,7 @@ public class IServiceSelectTest extends TestApplication {
 逻辑删除配置
 
 
-###application.properties
+### application.properties
 ```
 # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略配置@TableLogic步骤)
 mybatis-plus.global-config.db-config.logic-delete-field=deleted
@@ -1175,7 +1175,7 @@ public class User {
 ```
 
 
-###代码示例：IServiceLogicDeleteTest.java
+### 代码示例：IServiceLogicDeleteTest.java
 ```
 package xyz.zao123.java.mybatis;
 
@@ -1214,7 +1214,7 @@ public class IServiceLogicDeleteTest extends TestApplication{
 
 
 
-##Mybatis plus 乐观锁插件
+## Mybatis plus 乐观锁插件
 
 主要适用场景
 
@@ -1235,7 +1235,7 @@ public class IServiceLogicDeleteTest extends TestApplication{
 ---
 乐观锁配置需要2步 记得两步
 
-###1.插件配置
+### 1.插件配置
 ```
 package xyz.zao123.java.mybatis.config;
 
@@ -1265,7 +1265,7 @@ public class MybatisPlusConfig {
 ```
 
 
-###2.注解实体字段 @Version 必须要!
+### 2.注解实体字段 @Version 必须要!
 
 ```
 package xyz.zao123.java.mybatis.dao.entity;
@@ -1297,7 +1297,7 @@ public class User {
 
 
 
-###代码示例：IServiceUpdateLockTest.java
+### 代码示例：IServiceUpdateLockTest.java
 ```
 package xyz.zao123.java.mybatis;
 

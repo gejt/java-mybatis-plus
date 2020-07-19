@@ -1,4 +1,4 @@
-#使用Mybatis Plus简化Spring Boot +Mybatis项目开发
+# 使用Mybatis Plus简化Spring Boot +Mybatis项目开发
 
 ##Mybatis Plus 简介
 
@@ -6,7 +6,7 @@ MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的�
 
 愿景是成为 MyBatis 最好的搭档，就像 魂斗罗 中的 1P、2P，基友搭配，效率翻倍。
 
-
+![](./mybatis-plus.png)
 
 ###MyBatis-Plus有如下特性：
 
